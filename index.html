@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JK Movie Club – Movie Trailers Hub</title>
+
+<!-- SECURITY -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="no-referrer">
+
+<!-- SEO -->
+<meta name="description" content="JK Movie Club – Watch latest Bollywood, South, Hollywood & Web Series trailers in cinematic UI.">
+<meta name="keywords" content="movie trailers, bollywood trailers, hollywood trailers, web series">
+<meta name="author" content="JK Movie Club">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- BACKGROUND LAYER -->
+<div class="bg"></div>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+
+  <!-- BRAND -->
+  <div class="left">
+    <div class="brand-wrap">
+      <img src="assets/logo.png" class="brand-logo" alt="JK Movie Club">
+      <div>
+        <div class="logo">JK Movie Club</div>
+        <div class="subtitle">Trailers • Movies • Web Series</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a class="active">Home</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="help.html">Help / Chat</a>
+  </nav>
+
+  <!-- ADMIN ACCESS ONLY -->
+  <div class="auth">
+    <a href="admin/login.php" class="login-btn">Admin Login</a>
+  </div>
+
+</header>
+
+<!-- ================= MAIN ================= -->
+<main class="container">
+
+<!-- ================= HERO ================= -->
+<section class="hero reveal">
+  <div class="hero-inner">
+    <span class="hero-tag" id="heroTag">🎬 India’s Cinematic Trailer Hub</span>
+
+    <h1 id="heroTitle">
+      Experience <span>JK Movie Club🇮🇳</span>
+    </h1>
+
+    <p id="heroDesc">
+      Watch latest Bollywood, South, Hollywood and Web Series trailers
+      with ultra-fast loading and distraction-free cinematic UI.
+    </p>
+
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="scrollToMovies()">▶ Watch Trailers</button>
+      <button class="btn-outline" onclick="location.href='contact.html'">
+        📞 Business Contact
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRENDING (ADMIN CONTROLLED) ================= -->
+<section class="section reveal">
+  <h2>🔥 Trending Trailers</h2>
+  <div class="chips" id="trendingList">
+    <!-- injected from movies.json -->
+  </div>
+</section>
+
+<!-- ================= SEARCH ================= -->
+<section class="section search reveal">
+  <input type="text" id="searchInput" placeholder="Search movie name…">
+
+  <div class="filters">
+    <span class="active" data-filter="all">All</span>
+    <span data-filter="bollywood">Bollywood</span>
+    <span data-filter="south">South</span>
+    <span data-filter="hollywood">Hollywood</span>
+    <span data-filter="webseries">Web Series</span>
+  </div>
+</section>
+
+<!-- ================= MOVIES ================= -->
+<section class="movies reveal" id="movies">
+  <h2>All Movies</h2>
+
+  <!-- ADMIN DATA RENDER -->
+  <div class="grid" id="movieGrid"></div>
+
+  <p id="noResult" style="display:none;font-size:12px;color:#b6bcff;margin-top:10px">
+    No movies found.
+  </p>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about reveal">
+  <h2>About JK Movie Club</h2>
+  <p id="aboutText">
+    JK Movie Club ek premium trailer showcase platform chhe
+    jya tamne male Bollywood, South, Hollywood ane Web Series
+    na latest trailers ek clean, cinematic experience sathe.
+  </p>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  © 2025 JK Movie Club. All Rights Reserved.
+</footer>
+
+<!-- ================= JS ================= -->
+<script src="app.js" defer></script>
+
+<script>
+function scrollToMovies(){
+  document.getElementById("movies").scrollIntoView({ behavior:"smooth" });
+}
+</script>
+
+</body>
+</html>
